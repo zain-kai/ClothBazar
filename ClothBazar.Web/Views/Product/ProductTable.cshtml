@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "ProductTable";
 }
+@Scripts.Render("~/bundles/jquery")
 <div>
     <form method="post">
         <input type="text" id="searchTxt" name="Search" value="" />
@@ -52,12 +53,12 @@
     });
 
     $("#newbtn").click(function () {
-       
+
 
         $.ajax({
-            
+
             url: '/Product/Create',
-            
+
         })
             .done(function (response) {
                 $("#actionContainer").html(response);
